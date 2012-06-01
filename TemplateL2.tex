@@ -1,0 +1,62 @@
+% to be included in document which starting path is a subfolder of level 2
+% for example  DatesGenerator/Documentation/DatesGenerator.tex
+
+\documentclass{article}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amssymb,amsmath,color,fancyhdr,graphicx,multirow,rotating,eurosans,calc}
+
+% new command to display code in a framed box
+\newcommand{\codebox}[1]{
+\begin{quote}
+\fbox{\ttfamily {#1}}
+\end{quote}
+}
+
+\newsavebox{\mylogo}
+\savebox{\mylogo}{\includegraphics[width=2cm]{../../DocumentationTemplate/FairmatLogo.jpg}}
+
+\setlength{\headheight}{16.1pt}
+
+\pagestyle{fancyplain}{
+	\renewcommand{\sectionmark}[1]{\markboth{\thesection.\ #1}{}}
+	\lhead{\fancyplain{}{\nouppercase{\leftmark}}}
+	\chead{}
+	\rhead{\fancyplain{}{\usebox{\mylogo}}}
+	\lfoot{}
+	\cfoot{\fancyplain{\thepage}{\thepage}}
+	 \rfoot{\fancyplain{\includegraphics[width=1.6cm]{../../DocumentationTemplate/by-nc-sa.jpg}}{\includegraphics[width=1.6cm]{../../DocumentationTemplate/by-nc-sa.jpg}}}
+}
+
+%\pagestyle{fancy}{
+%	\renewcommand{\sectionmark}[1]{\markboth{\thesection.\ #1}{}}
+%	\lhead{\nouppercase{\leftmark}}
+%	\chead{}
+%	\rhead{\usebox{\mylogo}}
+%	\lfoot{}
+%	\cfoot{\thepage}
+%	\rfoot{ \includegraphics[width=1.6cm]{../../DocumentationTemplate/by-nc-sa.jpg} }
+%}
+
+\usepackage{url}
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+
+\newenvironment{sistema}%
+{\left\lbrace \begin{array}{@{}l@{}}}%
+{\end{array}\right.}
+
+\begin{document}
+
+\thispagestyle{plain}
+\begin{center}
+	\begin{tabular}{l|r}
+		{\huge \pluginName} & \multirow{2}{*}{\includegraphics[width=5cm]{../../DocumentationTemplate/FairmatLogo.jpg}}\\
+		{\huge Version \pluginVersion} &
+	\end{tabular}
+\end{center}
+\vspace{2cm}
+
