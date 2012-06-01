@@ -14,3 +14,5 @@ Containing Folder:
 * DVPLReferences (The references required to build plugins)
 
 After this project has been cloned it's possible to go in the folder containing the documentation, for example ./DatesGenerator/Documentation/ and use LaTeX as usual (eg: pdflatex DatesGenerator.tex). If everything was setup correctly the related pdf file will be generated in the Documentation folder.
+
+Note that all documentation is under Creative Commons by NC SA.
